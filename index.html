@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile Card with Video Background</title>
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="background.mp4" type="video/mp4">
+            <!-- Add fallback sources if needed -->
+            <!-- <source src="background.webm" type="video/webm"> -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="video-overlay"></div>
+    
+    <!-- Profile Card -->
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="profile-header-content">
+                <img src="channels4_profile.jpg" alt="Profile Picture" class="profile-image">
+                <div class="profile-header-text">
+                    <h1 class="profile-name led-effect">daniel_Brin</h1>
+                    <p class="profile-title led-effect">Content Maker</p>
+                </div>
+            </div>
+        </div>
+        <div class="profile-body">
+            <div class="profile-info">
+                <p><strong>Email:</strong>yuzhanindan@yandex.ru</p>
+            </div>
+            <div class="profile-bio">
+                <h2>About Me</h2>
+                <p>Привет, Я начинающий ютубер. Надеюсь, мой контент будет хорошим. Удачного просмотра!</p>
+            </div>
+            
+            <!-- LED Display Stats Section -->
+            <div class="games-led-display scan-lines">
+                <div class="games-led-title">GAMES I PLAY</div>
+                <div class="games-led-list">
+                    <div class="game-led-item">Gmod</div>
+                    <div class="game-led-item led-flicker">CS2</div>
+                    <div class="game-led-item">TF2</div>
+                    <div class="game-led-item led-blink">HL2</div>
+                    <div class="game-led-item">Minecraft</div>
+                </div>
+            </div>
+        </div>
+        <div class="profile-footer">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@Brin_Studio" class="social-link">youtube</a>
+                <a href="tiktok.com/@dan_brin" class="social-link">tiktok</a>
+                <a href="discord.gg/Fxw3UjHn8p" class="social-link">discord</a>
+                <a href="steamcommunity.com/id/DanielBrin" class="social-link">steam</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: Script to toggle video effects -->
+    <script>
+        // You can add JavaScript here to control video playback or effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.video-background video');
+            
+            // Optional: Pause video when not visible to save resources
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    video.pause();
+                } else {
+                    video.play();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
